@@ -755,7 +755,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const exportDocxBtn = document.getElementById('export-docx-btn');
     const exportXlsxBtn = document.getElementById('export-xlsx-btn');
     const exportPdfBtn = document.getElementById('export-pdf-btn');
-    const backToQMSBtn = document.getElementById('back-to-qms-btn');
 
     function toggleSidebar() {
         sidebar.classList.toggle('open');
@@ -817,14 +816,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (exportPdfBtn) {
         exportPdfBtn.addEventListener('click', () => {
             exportToPDF();
-        });
-    }
-
-    // Add event listener for the new button
-    if (backToQMSBtn) {
-        backToQMSBtn.addEventListener('click', () => {
-            // Redirect the user to the placeholder URL
-            window.location.href = "http://www.test.com"; // Using http:// for demonstration/placeholder
         });
     }
 });

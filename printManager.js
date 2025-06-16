@@ -191,19 +191,6 @@ export const PrintManager = {
         if (hideEmpty) {
             styles += `.print-hide { display: none !important; }`;
         }
-
-        // New option: expand hidden rows
-        const showHidden = document.getElementById('print-opt-show-hidden-rows').checked;
-        if (showHidden) {
-            styles += `
-                /* Show all hidden rows in tables for printing */
-                .item-details-table .additional-item.hidden,
-                .calibration-table .additional-item.hidden,
-                .document-table .additional-item.hidden {
-                    display: table-row !important;
-                }
-            `;
-        }
         
         // Add styles for paginated/dynamic content
         styles += `

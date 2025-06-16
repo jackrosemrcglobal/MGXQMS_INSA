@@ -134,6 +134,7 @@
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 12px;
     font-weight: 600;
@@ -445,7 +446,7 @@
     to { transform: translate(0, 0); opacity: 1; }
 }
 
-/* Modal General Styling */
+/* Print Options Modal */
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -455,12 +456,12 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    animation: fadeIn 0.2s ease-out; /* Fade in background */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal.show {
     display: block;
+    animation: fadeIn 0.2s ease-out;
 }
 
 .modal-content {
@@ -473,7 +474,7 @@
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
     overflow: hidden;
-    animation: slideInUp 0.3s ease-out; /* Slide in content */
+    animation: slideInUp 0.3s ease-out;
 }
 
 .modal-header {
@@ -552,7 +553,7 @@
 
 .modal-footer {
     border-top: 1px solid #ddd;
-    padding: 15px 24px;
+    padding-top: 15px;
     text-align: right;
 }
 
@@ -981,16 +982,15 @@
 
 /* Color picker for section legends */
 .legend-color-picker {
-    position: fixed; /* Changed from absolute to fixed */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
     background: white;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: var(--shadow-lg);
-    padding: 8px 0;
-    z-index: 1000; /* Lower z-index than modals */
-    font-size: 12px;
-    min-width: 180px;
-    backdrop-filter: blur(10px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     display: none;
 }
 
@@ -1444,21 +1444,6 @@ legend:hover {
     margin-top: 60px;
     position: relative;
     overflow: hidden;
-    display: flex; /* Use flexbox to align items */
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Center items horizontally */
-    flex-direction: column; /* Stack items vertically by default */
-}
-
-/* Company Logo Styling */
-.company-logo {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    object-fit: contain; /* Maintain aspect ratio */
-    z-index: 2; /* Ensure it's above gradients */
 }
 
 /* No color theme override for title block */
@@ -1785,14 +1770,5 @@ fieldset[data-section-id] legend:hover {
     .section-reorder-placeholder,
     .section-reorder-indicator {
         display: none !important;
-    }
-
-    .company-logo {
-        position: absolute;
-        top: 10mm; /* Adjust for print */
-        left: 10mm; /* Adjust for print */
-        width: 15mm; /* Adjust size for print */
-        height: 15mm; /* Adjust size for print */
-        object-fit: contain;
     }
 }

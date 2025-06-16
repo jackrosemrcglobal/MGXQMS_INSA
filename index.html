@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="styles/form-elements.css">
     <link rel="stylesheet" href="styles/tables.css">
     <link rel="stylesheet" href="styles/components.css">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="shortcut icon" type="image/png" href="logo.png">
 </head>
 <body>
     <button id="hamburger-menu" class="hamburger-menu">
@@ -78,23 +76,21 @@
             <div class="sidebar-template-selector">
                 <label for="template-select" class="sidebar-label">Template:</label>
                 <select id="template-select" class="sidebar-select">
-                    <option value="international-audit">Inspetion Report (International)</option>
                     <option value="master-view">Master View</option>
                     <option value="create-custom-inspection">Create Custom Inspection</option>
                     <option value="image-attachments">Image Attachments</option>
                     <option value="iso-checklist">ISO Checklist</option>
                     <option value="aml">AML</option>
+                    <option value="international-audit">International Audit Form</option>
                     <option value="create-new-template">Create New Template...</option>
                 </select>
                 <button id="edit-template-btn" class="sidebar-btn" style="margin-top: 8px; font-size: 0.7em;">Edit Templates</button>
             </div>
-            <button id="back-to-qms-btn" class="sidebar-btn">Back to MGXQMS</button>
         </div>
     </div>
     <div id="overlay" class="overlay"></div>
     
     <div class="title-block">
-        <img src="logo.png" alt="Company Logo" class="company-logo">
         <h1>Inspection Report Form</h1>
         <div class="title-info">
             <p>Professional inspection documentation system for comprehensive quality assurance and compliance reporting.</p>
@@ -141,12 +137,6 @@
                     <label>
                         <input type="checkbox" id="print-opt-empty-fields">
                         Hide Empty Rows/Fields
-                    </label>
-                </div>
-                <div class="print-option-item">
-                    <label>
-                        <input type="checkbox" id="print-opt-show-hidden-rows">
-                        Show Hidden Table Rows
                     </label>
                 </div>
             </div>
@@ -238,36 +228,6 @@
             </div>
             <div class="modal-footer">
                 <button id="close-template-manager-btn" class="sidebar-btn">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Download Manager Modal -->
-    <div id="download-manager-modal" class="modal no-print no-edit">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Download Settings</h2>
-                <button id="close-download-modal" class="close-button">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="download-filename">Filename:</label>
-                    <input type="text" id="download-filename" class="download-input" placeholder="Enter filename...">
-                </div>
-                <div class="form-group">
-                    <label for="download-location">Download Location:</label>
-                    <input type="text" id="download-location" class="download-input" placeholder="Default Downloads folder" readonly>
-                    <button type="button" id="choose-download-location" class="download-btn">Choose Folder</button>
-                    <small>Note: Directory selection is supported on modern browsers. The browser may still override the location based on your settings.</small>
-                </div>
-                <div class="download-preview">
-                    <strong>Full path preview:</strong>
-                    <div id="download-path-preview">Downloads/filename.ext</div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button id="download-confirm-btn" class="download-btn download-btn-primary">Download</button>
-                <button id="download-cancel-btn" class="download-btn download-btn-secondary">Cancel</button>
             </div>
         </div>
     </div>
